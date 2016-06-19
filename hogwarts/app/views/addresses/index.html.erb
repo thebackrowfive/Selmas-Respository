@@ -1,0 +1,37 @@
+<h1> in index.html file for phones </h1>
+
+<table>
+  <tr>
+      <th>Street Number</th>
+      <th>Street Name</th>
+      <th>City</th>
+      <th>Province or State</th>
+      <th>Postal Code</th>
+      <th>Other</th>
+      <th></th>
+      <th></th>
+      <th></th>
+  </tr>
+
+  <% @addresses.each do |address| %>
+    <tr>
+       <td><%= address.streetNumber %></td>
+       <td><%= address.streetName %></td>
+       <td><%= address.city %></td>
+       <td><%= address.provinceOrState %></td>
+       <td><%= address.postalCode %></td>
+       <td><%= address.other %></td>
+    
+       <td><%= link_to 'Show', [address.customer, address] %></td>
+       <td><%= link_to 'Edit', edit_customer_address_path(address.customer, address) %></td>
+       <td><%= link_to 'Destroy', [address.customer, address], :method => :delete,  data:{confirm: 'Are you sure?'} %>
+       
+    </tr>
+
+  <% end %>
+  </table>
+
+  <br/>
+
+  <%= link_to 'Back to customer', customer_path(@customer) %> 
+  <%= link_to 'Add Address', new_customer_address_path %>

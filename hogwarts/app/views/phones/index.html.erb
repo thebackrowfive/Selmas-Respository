@@ -1,0 +1,35 @@
+<h1> in index.html file for phones </h1>
+
+<table>
+  <tr>
+      <th>Phone Number Type</th>
+      <th>Phone Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+  </tr>
+
+  <% @phones.each do |phone| %>
+    <tr>
+       <td><%= phone.phoneNumberType %></td>
+       <td><%= phone.phoneNumber %></td>
+    
+       <td><%= link_to 'Show', [phone.customer, phone] %></td>
+       <td><%= link_to 'Edit', edit_customer_phone_path(phone.customer, phone) %></td>
+       <td><%= link_to 'Destroy', [phone.customer, phone], :method => :delete,  data:{confirm: 'Are you sure?'}  %>
+    </tr>
+
+  <% end %>
+  </table>
+ <br/>
+      
+  <%= link_to 'Add Phone', new_customer_phone_path %> 
+  <%= link_to 'Back to Customer', customer_path(@customer) %>
+  
+  
+ 
+       
+ 
+ 
+  
+ 

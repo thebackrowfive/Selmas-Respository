@@ -1,0 +1,13 @@
+ <p>
+   <em>Phone-number type:</em>
+   <%= @phone.phoneNumberType %>
+</p>
+
+<p>
+   <em>Phone-number:</em>
+   <%= @phone.phoneNumber %>
+</p>
+
+<%= link_to 'Edit', edit_customer_phone_path(@phone.customer, @phone) %> |
+<%= link_to 'Done', customer_phones_path(@phone.customer) %> 
+

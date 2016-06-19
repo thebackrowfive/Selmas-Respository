@@ -1,0 +1,15 @@
+<%= form_for([ @email.customer, @email]) do |f| %>
+
+ <div>
+   <%= f.label :emailType %> <br/>
+   <%= f.text_field :emailType %>
+ </div>
+
+ <div>
+   <%= f.label :email %> <br/>
+   <%= f.text_field :email %>
+ </div>
+
+ <%= f.submit %>
+
+<% end %>

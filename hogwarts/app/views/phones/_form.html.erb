@@ -1,0 +1,15 @@
+<%= form_for([ @phone.customer, @phone]) do |f| %>
+
+ <div>
+   <%= f.label :phoneNumberType %> <br/>
+   <%= f.text_field :phoneNumberType %>
+ </div>
+
+ <div>
+   <%= f.label :phoneNumber %> <br/>
+   <%= f.text_field :phoneNumber %>
+ </div>
+
+ <%= f.submit %>
+
+<% end %>

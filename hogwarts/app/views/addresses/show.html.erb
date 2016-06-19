@@ -1,0 +1,34 @@
+ <p>
+   <em>Street Number:</em>
+   <%= @address.streetNumber %>
+</p>
+
+<p>
+   <em>Street Name:</em>
+   <%= @address.streetName %>
+</p>
+
+<p>
+   <em>City:</em>
+   <%= @address.city %>
+</p>
+
+<p>
+   <em>Province or state:</em>
+   <%= @address.provinceOrState %>
+</p>
+
+<p>
+   <em>Postal code:</em>
+   <%= @address.postalCode %>
+</p>
+
+<p>
+   <em>Other:</em>
+   <%= @address.other %>
+</p>
+
+<%= link_to 'Edit', edit_customer_address_path(@address.customer, @address) %> |
+<%= link_to 'Done', customer_addresses_path(@address.customer) %> 
+
+

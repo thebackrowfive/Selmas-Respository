@@ -1,0 +1,28 @@
+<h1> in index.html file for phones </h1>
+
+<table>
+  <tr>
+      <th>Email type</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+  </tr>
+
+  <% @emails.each do |email| %>
+    <tr>
+       <td><%= email.emailType %></td>
+       <td><%= email.email %></td>
+    
+       <td><%= link_to 'Show', [email.customer, email] %></td>
+       <td><%= link_to 'Edit', edit_customer_email_path(email.customer, email) %></td>
+       <td><%= link_to 'Destroy', [email.customer, email], :method => :delete, data:{confirm: 'Are you sure?'}   %>
+    </tr>
+
+  <% end %>
+  </table>
+
+  <br/>
+
+    <%= link_to 'Back to Customer', customer_path(@customer) %>
+   <%= link_to 'Add Email', new_customer_email_path %>

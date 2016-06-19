@@ -1,0 +1,34 @@
+<p>
+  <strong>Last Name:</strong>
+  <%= @customer.lastName %>
+</p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @customer.firstName %>
+</p>
+
+<p>
+  <strong>Middle Name:</strong>
+  <%= @customer.middleName %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @customer.gender %>
+</p>
+
+<p>
+  <strong>Customer Registration Date:</strong>
+  <%= @customer.customerRegistrationDate.to_s("%m/%d/%Y") %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Destroy', customer_path(@customer),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Add Phones', customer_phones_path(@customer) %> |
+<%= link_to 'Add Address', customer_addresses_path(@customer) %> |
+<%= link_to 'Add Email', customer_emails_path(@customer) %> |
+<%= link_to 'Done', root_path,  data:{confirm: 'Congratulations, you have successfully signed up at Warthogs!'} %>

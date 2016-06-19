@@ -1,0 +1,35 @@
+<%= form_for([ @address.customer, @address]) do |f| %>
+
+ <div>
+   <%= f.label :streetNumber %> <br/>
+   <%= f.text_field :streetNumber %>
+ </div>
+
+ <div>
+   <%= f.label :streetName %> <br/>
+   <%= f.text_field :streetName %>
+ </div>
+
+<div>
+   <%= f.label :city %> <br/>
+   <%= f.text_field :city %>
+ </div>
+
+<div>
+   <%= f.label :provinceOrState %> <br/>
+   <%= f.text_field :provinceOrState %>
+ </div>
+
+<div>
+   <%= f.label :postalCode %> <br/>
+   <%= f.text_field :postalCode %>
+ </div>
+
+<div>
+   <%= f.label :other %> <br/>
+   <%= f.text_field :other %>
+ </div>
+
+ <%= f.submit %>
+
+<% end %>

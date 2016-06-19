@@ -1,0 +1,47 @@
+<h1>Editing customer</h1>
+
+<%= form_for :customer, url: customer_path(@customer), method: :patch do |f| %>
+<% if @customer.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        Unable to save customer due to <%= pluralize(@customer.errors.count, "error") %>.
+      </h2>
+      <ul>
+        <% @customer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :lastName %><br/>
+    <%= f.text_field :lastName %>
+  </p>
+
+  <p>
+    <%= f.label :firstName %><br/>
+    <%= f.text_field :firstName %>
+  </p>
+
+  <p>
+    <%= f.label :middleName %><br/>
+    <%= f.text_field :middleName %>
+  </p>
+
+  <p>
+    <%= f.label :gender %><br/>
+    <%= f.text_field :gender %>
+  </p>
+
+  <p>
+    <%= f.label :customerRegistrationDate %><br/>
+    <%= f.date_field :customerRegistrationDate %>
+  </p>
+
+  <p>
+    <%=f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', customers_path %>

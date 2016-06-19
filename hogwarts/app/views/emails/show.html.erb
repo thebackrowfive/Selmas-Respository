@@ -1,0 +1,14 @@
+ <p>
+   <em>Email type:</em>
+   <%= @email.emailType %>
+</p>
+
+<p>
+   <em>Email:</em>
+   <%= @email.email %>
+</p>
+
+<%= link_to 'Edit', edit_customer_email_path(@email.customer, @email) %> |
+<%= link_to 'Done', customer_emails_path(@email.customer) %> 
+
+
